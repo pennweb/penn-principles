@@ -1,26 +1,4373 @@
 <!DOCTYPE html>
-<html  lang="en">
-<head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>In Principle and Practice</title>
-<link rel="preload" as="fetch" crossorigin="anonymous" href="/_payload.json">
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.layout{min-height:100vh}.layout--default{background-color:#f3f3f1}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.video{height:100vh;min-height:700px;overflow:hidden;position:relative}.video__overlay{align-items:center;display:flex;height:100%;justify-content:center;position:absolute;transition:.2s ease-in-out;width:100%;z-index:10}.video__overlay--active{opacity:0;visibility:hidden}.video__image{height:100%}.video__iframe,.video__image{left:0;position:absolute;top:0;width:100%}.video__iframe{background-color:#000;height:80%}@media only screen and (min-width:40em){.video__iframe{height:100%}}.video__iframe iframe{height:100%;width:100%}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.hero{overflow-x:hidden;overflow-y:visible;position:relative;z-index:10}.hero,.hero__overlay{height:100%;width:100%}.hero__overlay{align-items:center;background:linear-gradient(90deg,#011f5b 10%,rgba(1,31,91,0));display:flex;flex-direction:column;justify-content:center;left:0;z-index:2}.hero__inner:first-child,.hero__overlay{position:absolute;top:0}.hero__top{display:flex;grid-column:span 12/span 12;justify-content:center;margin-top:40px}@media only screen and (min-width:40em){.hero__top{justify-content:space-between}}.hero__top .hero__badge{display:none}@media only screen and (min-width:40em){.hero__top .hero__badge{display:block}}.hero__main{grid-column:span 12/span 12;position:relative}@media only screen and (min-width:40em){.hero__main{grid-column:span 9/span 9}}@media only screen and (min-width:75em){.hero__main{grid-column:span 7/span 7}}.hero__main-group{position:relative}.hero__logo{width:300px}@media only screen and (min-width:40em){.hero__logo{width:360px}}.hero__badge{bottom:20px;position:absolute;right:20px;width:120px}@media only screen and (min-width:40em){.hero__badge{position:static}}.hero .subheading-style-1:after{background-color:#8f0000;content:"";display:block;height:7px;margin-top:7px;width:160px}.hero__signature{bottom:0;left:50%;position:absolute;transform:translateX(-50%) translateY(110%);width:54px}@media only screen and (min-width:40em){.hero__signature{transform:translateX(-50%) translateY(100%)}}.hero video{background-repeat:repeat;background-size:cover;bottom:0;height:auto;left:0;max-height:100%;min-height:100%;min-width:100%;-o-object-fit:cover;object-fit:cover;position:absolute;right:0;top:0;width:auto;z-index:1}.hero .btn-group{display:flex;margin-top:60px}@media only screen and (min-width:40em){.hero .btn-group{margin-top:40px}}.hero .btn-group .btn+.btn{margin-left:16px}.hero .btn{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;cursor:pointer;font-size:1rem}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.section-arrow-container{height:0;overflow:visible;position:relative}.section-arrow{bottom:0;left:50%;position:absolute;transform:translateX(-50%) translateY(50%);width:18px;z-index:50}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.context-section{padding:60px 0;position:relative}@media only screen and (min-width:40em){.context-section{padding:100px 0}}.context-section--dark{background-color:#011f5b}.context-section--dark .bottom-border{fill:#8f0000!important}.context-section__icons{align-items:center;display:flex;grid-column:span 12/span 12;justify-content:space-between;margin-bottom:24px}@media only screen and (min-width:40em){.context-section__icons{margin-bottom:8px}}.context-section__icons img{width:36px}.context-section__main{grid-column:span 12/span 12}@media only screen and (min-width:40em){.context-section__main{grid-column:span 8/span 8;grid-column-start:3}}.context-section__heading{line-height:54px}.context-section__heading span{display:inline-block;font-size:40px;margin-bottom:-10px;text-transform:lowercase}.context-section__p+.bottom-border{margin-top:60px}.context-section .bottom-border{fill:#011f5b;margin-left:auto;margin-right:auto;width:130px}@media only screen and (min-width:40em){.context-section .bottom-border{width:186px}}.context-section__reverse-arrow{transform:rotate(180deg)}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.media-context ul,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.media-context ul,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li,.media-context ul li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker,.media-context ul li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li,.media-context ul li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2,.media-context .heading-style-2+ul{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.fixed-media-context{padding-bottom:100px}.fixed-media-context__cart{align-items:center;display:flex;width:100vw}.media-context{width:100%}.media-context__context{display:flex;flex-direction:column;grid-column:span 12/span 12;justify-content:center}@media only screen and (min-width:40em){.media-context__context{grid-column:span 5/span 5}}.media-context__context+.media-context__media{margin-top:40px}@media only screen and (min-width:40em){.media-context__context+.media-context__media{margin-top:0}}.media-context__media{grid-column:span 12/span 12}@media only screen and (min-width:40em){.media-context__media{grid-column:span 6/span 6}}.media-context__number+.media-context__heading{margin-top:26px}.media-context__image{border:2px solid #8f0000;padding-bottom:66.6666%;position:relative;width:100%}.media-context__image img{position:absolute}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.controls-rail{position:relative}.controls-rail__cart{height:100vh;left:0;position:absolute;top:0;width:100%}.controls-rail__cart--bottomed{bottom:0;position:absolute;top:auto}.controls-rail__controls{display:none;font-size:0;position:absolute;right:40px;top:40vh}@media only screen and (min-width:40em){.controls-rail__controls{display:block}}.controls-rail__controls li+li{margin-top:10px}.controls-rail__controls button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#b7b6b2;border:0;font-size:0;height:12px;padding:0;transition:.2s ease-in-out;width:12px}.controls-rail__controls button.active{background-color:#011f5b;color:#f3f3f1;transform:rotate(225deg)}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.accordion__button,.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.accordion__button,.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.accordion__panel+.accordion__panel{border-top:1px solid #fff}.accordion__header{margin:0}.accordion__button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;cursor:pointer;margin:0;padding:30px 0;position:relative;text-align:left;width:100%;z-index:10}@media only screen and (min-width:75em){.accordion__button{padding:30px 30px 30px 0}}.accordion__window{height:0;margin:0;overflow:hidden;transition:.2s ease-in-out;visibility:hidden}.accordion__content{padding:20px 14px}.accordion p:first-child{margin-top:0}.accordion{background-color:#011f5b;padding:0 0 100px}.accordion__main{grid-column:span 12/span 12}.accordion__button{align-items:center;background-color:transparent;color:#f3f3f1;display:flex;justify-content:flex-start}.accordion__image{border:1px solid #f3f3f1;display:none;flex-shrink:0;padding-bottom:66.6666%;position:relative;width:100%}@media only screen and (min-width:40em){.accordion__image{display:block;height:170px;padding-bottom:0;width:270px}}.accordion__image img{position:absolute}@media only screen and (min-width:40em){.accordion__image+.accordion__title{margin-left:80px}}.accordion__title{justify-self:flex-start}.accordion__title .pill{margin-bottom:8px}.accordion__arrow-btn.pill{background-color:transparent;border:2px solid #8f0000;border-radius:30px;flex-shrink:0;height:30px;margin-left:20px;transition:.2s ease-in-out;width:60px}@media only screen and (min-width:40em){.accordion__arrow-btn.pill{margin-left:auto}}.accordion__arrow-btn.pill:hover,[aria-expanded=true] .accordion__arrow-btn.pill{background-color:#8f0000}.accordion__arrow-btn.pill svg{fill:#f3f3f1;transition:.2s ease-in-out;width:16px}[aria-expanded=true] .accordion__arrow-btn.pill svg{transform:rotate(180deg)}.accordion .alpha-list{color:#f3f3f1}@media only screen and (min-width:40em){.accordion .alpha-list{margin-left:350px}}.accordion .alpha-list li::marker{color:#8f0000}.accordion__content{padding:0 0 80px}.accordion__footer-decor{fill:#f3f3f1;display:block;margin:100px auto 0;width:360px}</style>
-<style>@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");*,:after,:before{box-sizing:inherit}html{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.heading-style-1{font-family:EB Garamond,serif;font-size:3.375rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-1{font-size:6vw}}.heading-style-2{font-family:EB Garamond,serif;font-size:2.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em}@media only screen and (min-width:75em){.heading-style-2{font-size:5vw}}.heading-style-3{font-family:EB Garamond,serif;font-size:1.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:32px}@media only screen and (min-width:75em){.heading-style-3{font-size:2.2vw}}.subheading-style-1{font-family:EB Garamond,serif;font-size:.9375rem;font-style:normal;font-weight:400;letter-spacing:.02em;text-transform:uppercase}@media only screen and (min-width:75em){.subheading-style-1{font-size:1.2vw}}.paragraph-style-1{font-family:EB Garamond,serif;font-size:1.4375rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:28px}@media only screen and (min-width:75em){.paragraph-style-1{font-size:2.1vw;line-height:2.4vw}}.alpha-list,.paragraph-style-2{font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px}@media only screen and (min-width:75em){.alpha-list,.paragraph-style-2{font-size:1.2vw;line-height:1.8vw}}.alpha-list li{list-style-type:disc;margin-left:15px;padding-left:10px}.alpha-list li::marker{color:#8f0000;font-family:EB Garamond,serif;font-size:.875rem;text-transform:uppercase}.alpha-list li+li{margin-top:20px}.text-light{color:#f3f3f1}.text-dark{color:#011f5b}.text-primary{color:#8f0000}.text-center{text-align:center}.heading-style-1+.paragraph-style-1{margin-top:40px}.heading-style-2+.paragraph-style-1{margin-top:20px}.heading-style-2+.alpha-list,.heading-style-2+.paragraph-style-2{margin-top:30px}.subheading-style-1+.heading-style-2{margin-top:20px}.btn{align-items:center;background-color:#e2e2e0;border-radius:4px;color:#011f5b;display:inline-flex;font-family:Open Sans,sans-serif;font-family:EB Garamond,serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;padding:5px 12px;text-decoration:none;text-transform:uppercase}@media only screen and (min-width:75em){.btn{font-size:1.2vw;line-height:1.8vw}}.btn--read svg{width:18px}.btn svg{fill:#011f5b;margin-right:8px;width:20px}.grid{-moz-column-gap:30px;column-gap:30px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));margin:0 auto;max-width:122.5rem;padding:0 25px;width:100%}@media only screen and (min-width:40em){.grid{-moz-column-gap:50px;column-gap:50px;padding:0 50px}}img{width:100%}.object-cover{height:100%;-o-object-fit:cover;object-fit:cover}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.pill{align-items:center;background-color:#8f0000;border-radius:10px;color:#f3f3f1;display:inline-flex;font-family:EB Garamond,serif;font-size:.875rem;height:20px;justify-content:center;text-transform:uppercase;width:48px}.footer{background-color:#f3f3f1;border-bottom:7px solid #011f5b;padding:100px 0 60px}.footer__main{align-items:center;display:flex;flex-direction:column;grid-column:span 12/span 12;justify-content:center}.footer__logo{width:280px}@media only screen and (min-width:40em){.footer__logo{width:540px}}.footer p{color:#011f5b;font-family:Open Sans,sans-serif;font-size:.875rem;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:20px;margin-top:80px}@media only screen and (min-width:75em){.footer p{font-size:1.2vw;line-height:1.8vw}}</style>
-<link rel="stylesheet" href="/_nuxt/entry.4f210c23.css">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.b3df9740.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.0e425df8.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-404.c35f6967.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/vue.f36acd1f.976e4ff6.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-500.97551344.js">
-<script type="module" src="/_nuxt/entry.b3df9740.js" crossorigin></script>
-<script id="unhead:payload" type="application/json">{"title":"In Principle and Practice"}</script></head>
-<body ><div id="__nuxt"><main class="layout layout--default"><!--[--><div class="video"><div class="video__overlay"><!--[--><div class="hero"><div class="hero__overlay"><div class="hero__inner grid"><div class="hero__top"><a href="https://www.upenn.edu/" target="_blank"><img class="hero__logo" src="/images/logo.svg" alt="header logo and link to homepage"></a><img class="hero__badge" src="/images/badge.svg" alt="badge"></div></div><div class="hero__inner grid"><div class="hero__main"><div class="hero__main-group"><div class="subheading-style-1 text-light">A Message from the President and Provost</div><h1 class="heading-style-2 text-light">Penn’s Focus on Tomorrow</h1><p class="paragraph-style-1 text-light">Introducing a New Strategic Framework for the University of Pennsylvania.</p></div><div class="btn-group"><button class="btn"><svg viewBox="0 0 19.7 13.6"><path d="M0 0v13.6l19.7-6.8z"></path></svg> Watch </button><a class="btn btn--read" href="/" target="_blank"><svg viewBox="0 0 17.1 13"><path d="M17.1 0 8.6 2.3 0 0v13l8.6-2.3 8.5 2.3z"></path></svg> Read </a></div></div></div></div><video autoplay muted loop><source src="/videos/videoplayback.mp4" type="video/mp4"></video></div><!--]--></div><div class="video__iframe"></div></div><div class="section-arrow-container"><img class="hero__arrow section-arrow" src="/images/arrow.svg" alt=""><!----></div><div class="context-section"><div class="context-section__inner grid"><div class="context-section__icons"><!----><!----><img src="/images/icon_5.svg" alt=""><img src="/images/icon_5.svg" alt=""></div><div class="context-section__main text-center"><h2 class="text-dark context-section__heading heading-style-1"><span>Our</span><br>Principles</h2><p class="text-primary context-section__p paragraph-style-1">We asked “What does the world need from Penn?” The resulting principles are the essence of who we are. They are Penn’s enduring values and distinctive strengths. They are where we as a campus community stand.</p><svg class="bottom-border" x="0" y="0" style="enable-background:new 0 0 185.5 10.1;" version="1.0" viewbox="0 0 185.5 10.1"><path d="M0 9h185.5v1H0zM0 0h185.5v3.5H0z"></path></svg></div></div></div><div class="controls-rail"><div class="controls-rail__cart"><ul class="controls-rail__controls"><li><button class="active">Scroll to section 1</button></li><li><button class="">Scroll to section 2</button></li><li><button class="">Scroll to section 3</button></li><li><button class="">Scroll to section 4</button></li></ul></div><!--[--><div class="fixed-media-context"><div class="fixed-media-context__cart"><div class="media-context"><div class="media-context__inner grid"><div class="media-context__context"><h3 class="media-context__heading heading-style-2 text-dark">The Anchored University</h3><ul class="alpha-list"><li>Our exceptional and diverse people, communities, and campus are our anchor, the foundation of all we do, and they guide and propel Penn.</li><li>Being an excellent Philadelphia neighbor and global citizen is essential to Penn’s mission.</li></ul></div><div class="media-context__media"><div class="media-context__image"><img class="object-cover" src="/images/image_1.jpeg" alt="test alt 1"></div></div></div></div></div></div><div class="fixed-media-context"><div class="fixed-media-context__cart"><div class="media-context"><div class="media-context__inner grid"><div class="media-context__context"><h3 class="media-context__heading heading-style-2 text-dark">The Interwoven University</h3><ul class="alpha-list"><li>The more ideas and people from all backgrounds we bring to the table—and the more interconnected and less siloed our community—the more rigorous, more resourceful, and more effective Penn is.</li><li>Leadership in interdisciplinary excellence distinguishes Penn.</li></ul></div><div class="media-context__media"><div class="media-context__image"><img class="object-cover" src="/images/image_2.jpeg" alt="students sitting in grass on campus."></div></div></div></div></div></div><div class="fixed-media-context"><div class="fixed-media-context__cart"><div class="media-context"><div class="media-context__inner grid"><div class="media-context__context"><h3 class="media-context__heading heading-style-2 text-dark">The Inventive University</h3><ul class="alpha-list"><li>Penn is a powerhouse for breakthroughs in all fields.</li><li>Penn addresses great challenges and opportunities.</li></ul></div><div class="media-context__media"><div class="media-context__image"><img class="object-cover" src="/images/image_3.jpeg" alt="student adjusting a projects engineering."></div></div></div></div></div></div><div class="fixed-media-context"><div class="fixed-media-context__cart"><div class="media-context"><div class="media-context__inner grid"><div class="media-context__context"><h3 class="media-context__heading heading-style-2 text-dark">The Engaged University</h3><ul class="alpha-list"><li>Penn cultivates leaders who serve.</li><li>Penn seeks dialogue and collaboration across differences and divides.</li></ul></div><div class="media-context__media"><div class="media-context__image"><img class="object-cover" src="/images/image_4.jpeg" alt="professor with students at a roundtable with a chalkboard in the background."></div></div></div></div></div></div><!--]--></div><div class="section-arrow-container"><!----><img class="hero__arrow section-arrow" src="/images/arrow2.svg" alt=""></div><div class="context-section context-section--dark"><div class="context-section__inner grid"><div class="context-section__icons"><img src="/images/icon_4.svg" alt=""><img src="/images/icon_4.svg" alt=""><!----><!----></div><div class="context-section__main text-center"><h2 class="text-light context-section__heading heading-style-1"><span>Our</span><br>Practices</h2><p class="text-light context-section__p paragraph-style-1">Our areas of practice directly support and strengthen Penn’s core educational mission. They will help us channel Penn’s excellence and its boundless creative energy to meet the needs of our time. These practices are meant to guide, not decide, our future course.</p><svg class="bottom-border" x="0" y="0" style="enable-background:new 0 0 185.5 10.1;" version="1.0" viewbox="0 0 185.5 10.1"><path d="M0 9h185.5v1H0zM0 0h185.5v3.5H0z"></path></svg></div></div></div><div class="accordion"><div class="accordion__inner grid"><div class="accordion__main"><!--[--><article class="accordion__panel" data-accordion-panel><h3 class="accordion__header"><button class="accordion__button" data-accordion-button aria-expanded="false"><div class="accordion__image"><img class="object-cover" src="/images/image_5.jpeg" alt="students studying with laptops"></div><div class="accordion__title"><div>Accelerate interdisciplinary pursuits</div></div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1"><path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path></svg></span></button></h3><div class="accordion__window" data-accordion-window><div class="accordion__content" data-accordion-content><ul class="alpha-list"><li>A cross-cutting University approach that spans boundaries to forge novel connections in teaching, research, and clinical practice to advance knowledge and improve lives. Expand our commitment to the power of curiosity-driven exploration across all fields of knowledge, from the arts and humanities to the sciences to the professions. Seek exponential growth in Penn’s interdisciplinary faculty support; even more inter-School teaching, projects, and programs; and rich opportunities for students and staff to pursue novel collaborations across a wide range of domains.</li><li>Champion the essential role of the arts and humanities at the core of the human endeavor.  They bring people together through deeper understanding of history, culture, social conditions, and empathy for others, and they foster problem-solving. We will seek new ways to strengthen and integrate them in all fields and amplify opportunities to explore Penn’s extraordinary repositories of culture and beauty on campus and beyond.</li><li>Continue to fuel Penn as a premier inventive powerhouse. From entrepreneurship to commercialization and tech transfer, Penn has established significant infrastructure to make this campus and city a destination for innovators. We will accelerate Penn as a premier powerhouse for translating knowledge into action and solutions.</li></ul></div></div></article><article class="accordion__panel" data-accordion-panel><h3 class="accordion__header"><button class="accordion__button" data-accordion-button aria-expanded="false"><div class="accordion__image"><img class="object-cover" src="/images/image_6.jpg" alt="students in a classroom"></div><div class="accordion__title"><div>Lead on great challenges of our time</div></div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1"><path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path></svg></span></button></h3><div class="accordion__window" data-accordion-window><div class="accordion__content" data-accordion-content><ul class="alpha-list"><li>Climate: Every person at Penn and all that we do has some nexus to the existential challenge of climate change. We must, in an all-in University effort, do more. From leading energy science and policy across disciplines to designing and caring for the built environment, Penn will seek additional ways to support and recruit the best minds; fuel initiatives that advance understanding and promise solutions; and adopt institutional best practices for the sake of our future and our planet.</li><li>Health: The pandemic cast in sharp relief the urgency of Penn’s groundbreaking work in life sciences and health across schools and disciplines. To help ensure a healthier, safer global future, Penn will do even more to advance our health efforts. We will further cement both Penn and the region as an epicenter for groundbreaking research and teaching, translational discovery, and policy expertise in life sciences and public health. </li><li>Data: From big data to large language model-powered AI, technological advances offer the chance to unlock new understanding across a dizzying number of domains and at the same time may dramatically outpace society’s ability to assess and plan for the promises and consequences. Penn is poised to lead in data-driven research, teaching, and applications. We will also cultivate leading expertise on how society can develop and deploy powerful technologies beneficially and justly.</li><li>Democracy, trust, and truth: Position Penn as a global leader in driving conversations about and promoting democratic values and institutions. Build on signature homegrown strengths and exceptionally broad-ranging expertise to seek and defend truth.</li></ul></div></div></article><article class="accordion__panel" data-accordion-panel><h3 class="accordion__header"><button class="accordion__button" data-accordion-button aria-expanded="false"><div class="accordion__image"><img class="object-cover" src="/images/image_7.jpeg" alt="group of students dressed in saree doing a traditioal dance"></div><div class="accordion__title"><div>Grow opportunity and strengthen affinity</div></div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1"><path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path></svg></span></button></h3><div class="accordion__window" data-accordion-window><div class="accordion__content" data-accordion-content><ul class="alpha-list"><li>Recruit and support diverse and exceptional students, faculty, and staff with the widest range of backgrounds, experiences, and perspectives.</li><li>Undertake our campus planning to ensure design and function that serves its community for generations to come. Our physical plant should be state-of-the-art, sustainable, and thoughtfully improved to foster the interactions, experiences, and relationships that knit communities together.</li></ul></div></div></article><article class="accordion__panel" data-accordion-panel><h3 class="accordion__header"><button class="accordion__button" data-accordion-button aria-expanded="false"><div class="accordion__image"><img class="object-cover" src="/images/image_8.jpeg" alt="professor lecturing young students sitting on the floor of a library"></div><div class="accordion__title"><div>Deepen connection with neighbors and the world</div></div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1"><path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path></svg></span></button></h3><div class="accordion__window" data-accordion-window><div class="accordion__content" data-accordion-content><ul class="alpha-list"><li>Excellent neighbor to West Philadelphia, our city, and region. Penn will pursue all that a collaborative urban institution and caring neighbor can do in this new era for cities everywhere. As one University, we will more centrally convene and coordinate all the work we do in meaningful partnership with our West Philadelphia neighbors, the city, and the region. We will leverage our academic expertise to shed light on, and seek solutions to, pressing urban challenges.</li><li>Model global citizen. At a time when the tectonic plates of the international community are shifting rapidly, what is a leading American university’s role in the world? By building on existing partnerships around the world and further investing in global research, teaching, and learning on campus, Penn will help define what the next decade requires of a leading global university.</li></ul></div></div></article><article class="accordion__panel" data-accordion-panel><h3 class="accordion__header"><button class="accordion__button" data-accordion-button aria-expanded="false"><div class="accordion__image"><img class="object-cover" src="/images/image_9.jpeg" alt="staff at penn vet working dog center training dogs"></div><div class="accordion__title"><div>Foster leadership and service</div></div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1"><path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path></svg></span></button></h3><div class="accordion__window" data-accordion-window><div class="accordion__content" data-accordion-content><ul class="alpha-list"><li>Cultivate leaders who serve. The world needs leaders now more than ever—discerning leaders who have knowledge, vision, creativity, and, above all, a commitment to making a difference for others and for the planet. Penn has long prepared students to be leaders. For the future, we will build on existing resources and initiate new ways of cultivating service-minded leadership among our students, and also our faculty and staff.</li><li>Best-in-class instruction. Producing knowledge and transmitting that knowledge to the next generation is the very core of the Penn experience. We will continually seek to advance state-of-the-art and innovative instruction to best deliver on our mission of preparing future generations to think critically and lead effectively. </li><li>Convene, communicate, and collaborate across divisions and divides.</li></ul></div></div></article><!--]--></div></div></div><div class="footer"><div class="footer__inner grid"><div class="footer__main"><a href="https://www.upenn.edu/" target="_blank"><img class="footer__logo" src="/images/logo2.svg" alt="footer logo and link to homepage"></a><p>@inPrinciple&amp;Practice</p></div></div></div><!--]--></main></div><script type="application/json" id="__NUXT_DATA__" data-ssr="true" data-src="/_payload.json">[{"state":1,"_errors":3,"serverRendered":5,"path":6,"prerenderedAt":7},["Reactive",2],{},["Reactive",4],{},true,"/",1697040511967]</script>
-<script>window.__NUXT__={};window.__NUXT__.config={public:{},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>In Principle and Practice</title>
+    <link rel="preload" as="fetch" crossorigin="anonymous" href="/_payload.json">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .layout {
+            min-height: 100vh
+        }
+
+        .layout--default {
+            background-color: #f3f3f1
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .video {
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+            position: relative
+        }
+
+        .video__overlay {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            position: absolute;
+            transition: .2s ease-in-out;
+            width: 100%;
+            z-index: 10
+        }
+
+        .video__overlay--active {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .video__image {
+            height: 100%
+        }
+
+        .video__iframe,
+        .video__image {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%
+        }
+
+        .video__iframe {
+            background-color: #000;
+            height: 80%
+        }
+
+        @media only screen and (min-width:40em) {
+            .video__iframe {
+                height: 100%
+            }
+        }
+
+        .video__iframe iframe {
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .hero {
+            overflow-x: hidden;
+            overflow-y: visible;
+            position: relative;
+            z-index: 10
+        }
+
+        .hero,
+        .hero__overlay {
+            height: 100%;
+            width: 100%
+        }
+
+        .hero__overlay {
+            align-items: center;
+            background: linear-gradient(90deg, #011f5b 10%, rgba(1, 31, 91, 0));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0;
+            z-index: 2
+        }
+
+        .hero__inner:first-child,
+        .hero__overlay {
+            position: absolute;
+            top: 0
+        }
+
+        .hero__top {
+            display: flex;
+            grid-column: span 12/span 12;
+            justify-content: center;
+            margin-top: 40px
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__top {
+                justify-content: space-between
+            }
+        }
+
+        .hero__top .hero__badge {
+            display: none
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__top .hero__badge {
+                display: block
+            }
+        }
+
+        .hero__main {
+            grid-column: span 12/span 12;
+            position: relative
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__main {
+                grid-column: span 9/span 9
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .hero__main {
+                grid-column: span 7/span 7
+            }
+        }
+
+        .hero__main-group {
+            position: relative
+        }
+
+        .hero__logo {
+            width: 300px
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__logo {
+                width: 360px
+            }
+        }
+
+        .hero__badge {
+            bottom: 20px;
+            position: absolute;
+            right: 20px;
+            width: 120px
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__badge {
+                position: static
+            }
+        }
+
+        .hero .subheading-style-1:after {
+            background-color: #8f0000;
+            content: "";
+            display: block;
+            height: 7px;
+            margin-top: 7px;
+            width: 160px
+        }
+
+        .hero__signature {
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) translateY(110%);
+            width: 54px
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero__signature {
+                transform: translateX(-50%) translateY(100%)
+            }
+        }
+
+        .hero video {
+            background-repeat: repeat;
+            background-size: cover;
+            bottom: 0;
+            height: auto;
+            left: 0;
+            max-height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+            z-index: 1
+        }
+
+        .hero .btn-group {
+            display: flex;
+            margin-top: 60px
+        }
+
+        @media only screen and (min-width:40em) {
+            .hero .btn-group {
+                margin-top: 40px
+            }
+        }
+
+        .hero .btn-group .btn+.btn {
+            margin-left: 16px
+        }
+
+        .hero .btn {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 0;
+            cursor: pointer;
+            font-size: 1rem
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .section-arrow-container {
+            height: 0;
+            overflow: visible;
+            position: relative
+        }
+
+        .section-arrow {
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) translateY(50%);
+            width: 18px;
+            z-index: 50
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .context-section {
+            padding: 60px 0;
+            position: relative
+        }
+
+        @media only screen and (min-width:40em) {
+            .context-section {
+                padding: 100px 0
+            }
+        }
+
+        .context-section--dark {
+            background-color: #011f5b
+        }
+
+        .context-section--dark .bottom-border {
+            fill: #8f0000 !important
+        }
+
+        .context-section__icons {
+            align-items: center;
+            display: flex;
+            grid-column: span 12/span 12;
+            justify-content: space-between;
+            margin-bottom: 24px
+        }
+
+        @media only screen and (min-width:40em) {
+            .context-section__icons {
+                margin-bottom: 8px
+            }
+        }
+
+        .context-section__icons img {
+            width: 36px
+        }
+
+        .context-section__main {
+            grid-column: span 12/span 12
+        }
+
+        @media only screen and (min-width:40em) {
+            .context-section__main {
+                grid-column: span 8/span 8;
+                grid-column-start: 3
+            }
+        }
+
+        .context-section__heading {
+            line-height: 54px
+        }
+
+        .context-section__heading span {
+            display: inline-block;
+            font-size: 40px;
+            margin-bottom: -10px;
+            text-transform: lowercase
+        }
+
+        .context-section__p+.bottom-border {
+            margin-top: 60px
+        }
+
+        .context-section .bottom-border {
+            fill: #011f5b;
+            margin-left: auto;
+            margin-right: auto;
+            width: 130px
+        }
+
+        @media only screen and (min-width:40em) {
+            .context-section .bottom-border {
+                width: 186px
+            }
+        }
+
+        .context-section__reverse-arrow {
+            transform: rotate(180deg)
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .media-context ul,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .media-context ul,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li,
+        .media-context ul li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker,
+        .media-context ul li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li,
+        .media-context ul li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2,
+        .media-context .heading-style-2+ul {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .fixed-media-context {
+            padding-bottom: 100px
+        }
+
+        .fixed-media-context__cart {
+            align-items: center;
+            display: flex;
+            width: 100vw
+        }
+
+        .media-context {
+            width: 100%
+        }
+
+        .media-context__context {
+            display: flex;
+            flex-direction: column;
+            grid-column: span 12/span 12;
+            justify-content: center
+        }
+
+        @media only screen and (min-width:40em) {
+            .media-context__context {
+                grid-column: span 5/span 5
+            }
+        }
+
+        .media-context__context+.media-context__media {
+            margin-top: 40px
+        }
+
+        @media only screen and (min-width:40em) {
+            .media-context__context+.media-context__media {
+                margin-top: 0
+            }
+        }
+
+        .media-context__media {
+            grid-column: span 12/span 12
+        }
+
+        @media only screen and (min-width:40em) {
+            .media-context__media {
+                grid-column: span 6/span 6
+            }
+        }
+
+        .media-context__number+.media-context__heading {
+            margin-top: 26px
+        }
+
+        .media-context__image {
+            border: 2px solid #8f0000;
+            padding-bottom: 66.6666%;
+            position: relative;
+            width: 100%
+        }
+
+        .media-context__image img {
+            position: absolute
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .controls-rail {
+            position: relative
+        }
+
+        .controls-rail__cart {
+            height: 100vh;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%
+        }
+
+        .controls-rail__cart--bottomed {
+            bottom: 0;
+            position: absolute;
+            top: auto
+        }
+
+        .controls-rail__controls {
+            display: none;
+            font-size: 0;
+            position: absolute;
+            right: 40px;
+            top: 40vh
+        }
+
+        @media only screen and (min-width:40em) {
+            .controls-rail__controls {
+                display: block
+            }
+        }
+
+        .controls-rail__controls li+li {
+            margin-top: 10px
+        }
+
+        .controls-rail__controls button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #b7b6b2;
+            border: 0;
+            font-size: 0;
+            height: 12px;
+            padding: 0;
+            transition: .2s ease-in-out;
+            width: 12px
+        }
+
+        .controls-rail__controls button.active {
+            background-color: #011f5b;
+            color: #f3f3f1;
+            transform: rotate(225deg)
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .accordion__button,
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .accordion__button,
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .accordion__panel+.accordion__panel {
+            border-top: 1px solid #fff
+        }
+
+        .accordion__header {
+            margin: 0
+        }
+
+        .accordion__button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            padding: 30px 0;
+            position: relative;
+            text-align: left;
+            width: 100%;
+            z-index: 10
+        }
+
+        @media only screen and (min-width:75em) {
+            .accordion__button {
+                padding: 30px 30px 30px 0
+            }
+        }
+
+        .accordion__window {
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+            transition: .2s ease-in-out;
+            visibility: hidden
+        }
+
+        .accordion__content {
+            padding: 20px 14px
+        }
+
+        .accordion p:first-child {
+            margin-top: 0
+        }
+
+        .accordion {
+            background-color: #011f5b;
+            padding: 0 0 100px
+        }
+
+        .accordion__main {
+            grid-column: span 12/span 12
+        }
+
+        .accordion__button {
+            align-items: center;
+            background-color: transparent;
+            color: #f3f3f1;
+            display: flex;
+            justify-content: flex-start
+        }
+
+        .accordion__image {
+            border: 1px solid #f3f3f1;
+            display: none;
+            flex-shrink: 0;
+            padding-bottom: 66.6666%;
+            position: relative;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .accordion__image {
+                display: block;
+                height: 170px;
+                padding-bottom: 0;
+                width: 270px
+            }
+        }
+
+        .accordion__image img {
+            position: absolute
+        }
+
+        @media only screen and (min-width:40em) {
+            .accordion__image+.accordion__title {
+                margin-left: 80px
+            }
+        }
+
+        .accordion__title {
+            justify-self: flex-start
+        }
+
+        .accordion__title .pill {
+            margin-bottom: 8px
+        }
+
+        .accordion__arrow-btn.pill {
+            background-color: transparent;
+            border: 2px solid #8f0000;
+            border-radius: 30px;
+            flex-shrink: 0;
+            height: 30px;
+            margin-left: 20px;
+            transition: .2s ease-in-out;
+            width: 60px
+        }
+
+        @media only screen and (min-width:40em) {
+            .accordion__arrow-btn.pill {
+                margin-left: auto
+            }
+        }
+
+        .accordion__arrow-btn.pill:hover,
+        [aria-expanded=true] .accordion__arrow-btn.pill {
+            background-color: #8f0000
+        }
+
+        .accordion__arrow-btn.pill svg {
+            fill: #f3f3f1;
+            transition: .2s ease-in-out;
+            width: 16px
+        }
+
+        [aria-expanded=true] .accordion__arrow-btn.pill svg {
+            transform: rotate(180deg)
+        }
+
+        .accordion .alpha-list {
+            color: #f3f3f1
+        }
+
+        @media only screen and (min-width:40em) {
+            .accordion .alpha-list {
+                margin-left: 350px
+            }
+        }
+
+        .accordion .alpha-list li::marker {
+            color: #8f0000
+        }
+
+        .accordion__content {
+            padding: 0 0 80px
+        }
+
+        .accordion__footer-decor {
+            fill: #f3f3f1;
+            display: block;
+            margin: 100px auto 0;
+            width: 360px
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        html {
+            box-sizing: border-box
+        }
+
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            border: 0;
+            font-size: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .heading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 3.375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-1 {
+                font-size: 6vw
+            }
+        }
+
+        .heading-style-2 {
+            font-family: EB Garamond, serif;
+            font-size: 2.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-2 {
+                font-size: 5vw
+            }
+        }
+
+        .heading-style-3 {
+            font-family: EB Garamond, serif;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 32px
+        }
+
+        @media only screen and (min-width:75em) {
+            .heading-style-3 {
+                font-size: 2.2vw
+            }
+        }
+
+        .subheading-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: .9375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .02em;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .subheading-style-1 {
+                font-size: 1.2vw
+            }
+        }
+
+        .paragraph-style-1 {
+            font-family: EB Garamond, serif;
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 28px
+        }
+
+        @media only screen and (min-width:75em) {
+            .paragraph-style-1 {
+                font-size: 2.1vw;
+                line-height: 2.4vw
+            }
+        }
+
+        .alpha-list,
+        .paragraph-style-2 {
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px
+        }
+
+        @media only screen and (min-width:75em) {
+
+            .alpha-list,
+            .paragraph-style-2 {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .alpha-list li {
+            list-style-type: disc;
+            margin-left: 15px;
+            padding-left: 10px
+        }
+
+        .alpha-list li::marker {
+            color: #8f0000;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            text-transform: uppercase
+        }
+
+        .alpha-list li+li {
+            margin-top: 20px
+        }
+
+        .text-light {
+            color: #f3f3f1
+        }
+
+        .text-dark {
+            color: #011f5b
+        }
+
+        .text-primary {
+            color: #8f0000
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .heading-style-1+.paragraph-style-1 {
+            margin-top: 40px
+        }
+
+        .heading-style-2+.paragraph-style-1 {
+            margin-top: 20px
+        }
+
+        .heading-style-2+.alpha-list,
+        .heading-style-2+.paragraph-style-2 {
+            margin-top: 30px
+        }
+
+        .subheading-style-1+.heading-style-2 {
+            margin-top: 20px
+        }
+
+        .btn {
+            align-items: center;
+            background-color: #e2e2e0;
+            border-radius: 4px;
+            color: #011f5b;
+            display: inline-flex;
+            font-family: Open Sans, sans-serif;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            padding: 5px 12px;
+            text-decoration: none;
+            text-transform: uppercase
+        }
+
+        @media only screen and (min-width:75em) {
+            .btn {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+
+        .btn--read svg {
+            width: 18px
+        }
+
+        .btn svg {
+            fill: #011f5b;
+            margin-right: 8px;
+            width: 20px
+        }
+
+        .grid {
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            margin: 0 auto;
+            max-width: 122.5rem;
+            padding: 0 25px;
+            width: 100%
+        }
+
+        @media only screen and (min-width:40em) {
+            .grid {
+                -moz-column-gap: 50px;
+                column-gap: 50px;
+                padding: 0 50px
+            }
+        }
+
+        img {
+            width: 100%
+        }
+
+        .object-cover {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .sr-only {
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .pill {
+            align-items: center;
+            background-color: #8f0000;
+            border-radius: 10px;
+            color: #f3f3f1;
+            display: inline-flex;
+            font-family: EB Garamond, serif;
+            font-size: .875rem;
+            height: 20px;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 48px
+        }
+
+        .footer {
+            background-color: #f3f3f1;
+            border-bottom: 7px solid #011f5b;
+            padding: 100px 0 60px
+        }
+
+        .footer__main {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            grid-column: span 12/span 12;
+            justify-content: center
+        }
+
+        .footer__logo {
+            width: 280px
+        }
+
+        @media only screen and (min-width:40em) {
+            .footer__logo {
+                width: 540px
+            }
+        }
+
+        .footer p {
+            color: #011f5b;
+            font-family: Open Sans, sans-serif;
+            font-size: .875rem;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            line-height: 20px;
+            margin-top: 80px
+        }
+
+        @media only screen and (min-width:75em) {
+            .footer p {
+                font-size: 1.2vw;
+                line-height: 1.8vw
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/_nuxt/entry.4f210c23.css">
+    <link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.b3df9740.js">
+    <link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.0e425df8.js">
+    <link rel="prefetch" as="script" crossorigin href="/_nuxt/error-404.c35f6967.js">
+    <link rel="prefetch" as="script" crossorigin href="/_nuxt/vue.f36acd1f.976e4ff6.js">
+    <link rel="prefetch" as="script" crossorigin href="/_nuxt/error-500.97551344.js">
+    <script type="module" src="/_nuxt/entry.b3df9740.js" crossorigin></script>
+    <script id="unhead:payload" type="application/json">{"title":"In Principle and Practice"}</script>
+</head>
+
+<body>
+    <div id="__nuxt">
+        <main class="layout layout--default"><!--[-->
+            <div class="video">
+                <div class="video__overlay"><!--[-->
+                    <div class="hero">
+                        <div class="hero__overlay">
+                            <div class="hero__inner grid">
+                                <div class="hero__top"><a href="https://www.upenn.edu/" target="_blank"><img
+                                            class="hero__logo" src="/images/logo.svg"
+                                            alt="header logo and link to homepage"></a><img class="hero__badge"
+                                        src="/images/badge.svg" alt="badge"></div>
+                            </div>
+                            <div class="hero__inner grid">
+                                <div class="hero__main">
+                                    <div class="hero__main-group">
+                                        <div class="subheading-style-1 text-light">A Message from the President and
+                                            Provost</div>
+                                        <h1 class="heading-style-2 text-light">Penn’s Focus on Tomorrow</h1>
+                                        <p class="paragraph-style-1 text-light">Introducing a New Strategic Framework
+                                            for the University of Pennsylvania.</p>
+                                    </div>
+                                    <div class="btn-group"><button class="btn"><svg viewBox="0 0 19.7 13.6">
+                                                <path d="M0 0v13.6l19.7-6.8z"></path>
+                                            </svg> Watch </button><a class="btn btn--read" href="/" target="_blank"><svg
+                                                viewBox="0 0 17.1 13">
+                                                <path d="M17.1 0 8.6 2.3 0 0v13l8.6-2.3 8.5 2.3z"></path>
+                                            </svg> Read </a></div>
+                                </div>
+                            </div>
+                        </div><video autoplay muted loop>
+                            <source src="/videos/videoplayback.mp4" type="video/mp4">
+                        </video>
+                    </div><!--]-->
+                </div>
+                <div class="video__iframe"></div>
+            </div>
+            <div class="section-arrow-container"><img class="hero__arrow section-arrow" src="/images/arrow.svg"
+                    alt=""><!----></div>
+            <div class="context-section">
+                <div class="context-section__inner grid">
+                    <div class="context-section__icons"><!----><!----><img src="/images/icon_5.svg" alt=""><img
+                            src="/images/icon_5.svg" alt=""></div>
+                    <div class="context-section__main text-center">
+                        <h2 class="text-dark context-section__heading heading-style-1"><span>Our</span><br>Principles
+                        </h2>
+                        <p class="text-primary context-section__p paragraph-style-1">We asked “What does the world need
+                            from Penn?” The resulting principles are the essence of who we are. They are Penn’s enduring
+                            values and distinctive strengths. They are where we as a campus community stand.</p><svg
+                            class="bottom-border" x="0" y="0" style="enable-background:new 0 0 185.5 10.1;"
+                            version="1.0" viewbox="0 0 185.5 10.1">
+                            <path d="M0 9h185.5v1H0zM0 0h185.5v3.5H0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="controls-rail">
+                <div class="controls-rail__cart">
+                    <ul class="controls-rail__controls">
+                        <li><button class="active">Scroll to section 1</button></li>
+                        <li><button class="">Scroll to section 2</button></li>
+                        <li><button class="">Scroll to section 3</button></li>
+                        <li><button class="">Scroll to section 4</button></li>
+                    </ul>
+                </div><!--[-->
+                <div class="fixed-media-context">
+                    <div class="fixed-media-context__cart">
+                        <div class="media-context">
+                            <div class="media-context__inner grid">
+                                <div class="media-context__context">
+                                    <h3 class="media-context__heading heading-style-2 text-dark">The Anchored University
+                                    </h3>
+                                    <ul class="alpha-list">
+                                        <li>Our exceptional and diverse people, communities, and campus are our anchor,
+                                            the foundation of all we do, and they guide and propel Penn.</li>
+                                        <li>Being an excellent Philadelphia neighbor and global citizen is essential to
+                                            Penn’s mission.</li>
+                                    </ul>
+                                </div>
+                                <div class="media-context__media">
+                                    <div class="media-context__image"><img class="object-cover"
+                                            src="/images/image_1.jpeg" alt="test alt 1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-media-context">
+                    <div class="fixed-media-context__cart">
+                        <div class="media-context">
+                            <div class="media-context__inner grid">
+                                <div class="media-context__context">
+                                    <h3 class="media-context__heading heading-style-2 text-dark">The Interwoven
+                                        University</h3>
+                                    <ul class="alpha-list">
+                                        <li>The more ideas and people from all backgrounds we bring to the table—and the
+                                            more interconnected and less siloed our community—the more rigorous, more
+                                            resourceful, and more effective Penn is.</li>
+                                        <li>Leadership in interdisciplinary excellence distinguishes Penn.</li>
+                                    </ul>
+                                </div>
+                                <div class="media-context__media">
+                                    <div class="media-context__image"><img class="object-cover"
+                                            src="/images/image_2.jpeg" alt="students sitting in grass on campus."></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-media-context">
+                    <div class="fixed-media-context__cart">
+                        <div class="media-context">
+                            <div class="media-context__inner grid">
+                                <div class="media-context__context">
+                                    <h3 class="media-context__heading heading-style-2 text-dark">The Inventive
+                                        University</h3>
+                                    <ul class="alpha-list">
+                                        <li>Penn is a powerhouse for breakthroughs in all fields.</li>
+                                        <li>Penn addresses great challenges and opportunities.</li>
+                                    </ul>
+                                </div>
+                                <div class="media-context__media">
+                                    <div class="media-context__image"><img class="object-cover"
+                                            src="/images/image_3.jpeg" alt="student adjusting a projects engineering.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-media-context">
+                    <div class="fixed-media-context__cart">
+                        <div class="media-context">
+                            <div class="media-context__inner grid">
+                                <div class="media-context__context">
+                                    <h3 class="media-context__heading heading-style-2 text-dark">The Engaged University
+                                    </h3>
+                                    <ul class="alpha-list">
+                                        <li>Penn cultivates leaders who serve.</li>
+                                        <li>Penn seeks dialogue and collaboration across differences and divides.</li>
+                                    </ul>
+                                </div>
+                                <div class="media-context__media">
+                                    <div class="media-context__image"><img class="object-cover"
+                                            src="/images/image_4.jpeg"
+                                            alt="professor with students at a roundtable with a chalkboard in the background.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--]-->
+            </div>
+            <div class="section-arrow-container"><!----><img class="hero__arrow section-arrow" src="/images/arrow2.svg"
+                    alt=""></div>
+            <div class="context-section context-section--dark">
+                <div class="context-section__inner grid">
+                    <div class="context-section__icons"><img src="/images/icon_4.svg" alt=""><img
+                            src="/images/icon_4.svg" alt=""><!----><!----></div>
+                    <div class="context-section__main text-center">
+                        <h2 class="text-light context-section__heading heading-style-1"><span>Our</span><br>Practices
+                        </h2>
+                        <p class="text-light context-section__p paragraph-style-1">Our areas of practice directly
+                            support and strengthen Penn’s core educational mission. They will help us channel Penn’s
+                            excellence and its boundless creative energy to meet the needs of our time. These practices
+                            are meant to guide, not decide, our future course.</p><svg class="bottom-border" x="0" y="0"
+                            style="enable-background:new 0 0 185.5 10.1;" version="1.0" viewbox="0 0 185.5 10.1">
+                            <path d="M0 9h185.5v1H0zM0 0h185.5v3.5H0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion__inner grid">
+                    <div class="accordion__main"><!--[-->
+                        <article class="accordion__panel" data-accordion-panel>
+                            <h3 class="accordion__header"><button class="accordion__button" data-accordion-button
+                                    aria-expanded="false">
+                                    <div class="accordion__image"><img class="object-cover" src="/images/image_5.jpeg"
+                                            alt="students studying with laptops"></div>
+                                    <div class="accordion__title">
+                                        <div>Accelerate interdisciplinary pursuits</div>
+                                    </div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1">
+                                            <path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path>
+                                        </svg></span>
+                                </button></h3>
+                            <div class="accordion__window" data-accordion-window>
+                                <div class="accordion__content" data-accordion-content>
+                                    <ul class="alpha-list">
+                                        <li>A cross-cutting University approach that spans boundaries to forge novel
+                                            connections in teaching, research, and clinical practice to advance
+                                            knowledge and improve lives. Expand our commitment to the power of
+                                            curiosity-driven exploration across all fields of knowledge, from the arts
+                                            and humanities to the sciences to the professions. Seek exponential growth
+                                            in Penn’s interdisciplinary faculty support; even more inter-School
+                                            teaching, projects, and programs; and rich opportunities for students and
+                                            staff to pursue novel collaborations across a wide range of domains.</li>
+                                        <li>Champion the essential role of the arts and humanities at the core of the
+                                            human endeavor. They bring people together through deeper understanding of
+                                            history, culture, social conditions, and empathy for others, and they foster
+                                            problem-solving. We will seek new ways to strengthen and integrate them in
+                                            all fields and amplify opportunities to explore Penn’s extraordinary
+                                            repositories of culture and beauty on campus and beyond.</li>
+                                        <li>Continue to fuel Penn as a premier inventive powerhouse. From
+                                            entrepreneurship to commercialization and tech transfer, Penn has
+                                            established significant infrastructure to make this campus and city a
+                                            destination for innovators. We will accelerate Penn as a premier powerhouse
+                                            for translating knowledge into action and solutions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion__panel" data-accordion-panel>
+                            <h3 class="accordion__header"><button class="accordion__button" data-accordion-button
+                                    aria-expanded="false">
+                                    <div class="accordion__image"><img class="object-cover" src="/images/image_6.jpg"
+                                            alt="students in a classroom"></div>
+                                    <div class="accordion__title">
+                                        <div>Lead on great challenges of our time</div>
+                                    </div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1">
+                                            <path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path>
+                                        </svg></span>
+                                </button></h3>
+                            <div class="accordion__window" data-accordion-window>
+                                <div class="accordion__content" data-accordion-content>
+                                    <ul class="alpha-list">
+                                        <li>Climate: Every person at Penn and all that we do has some nexus to the
+                                            existential challenge of climate change. We must, in an all-in University
+                                            effort, do more. From leading energy science and policy across disciplines
+                                            to designing and caring for the built environment, Penn will seek additional
+                                            ways to support and recruit the best minds; fuel initiatives that advance
+                                            understanding and promise solutions; and adopt institutional best practices
+                                            for the sake of our future and our planet.</li>
+                                        <li>Health: The pandemic cast in sharp relief the urgency of Penn’s
+                                            groundbreaking work in life sciences and health across schools and
+                                            disciplines. To help ensure a healthier, safer global future, Penn will do
+                                            even more to advance our health efforts. We will further cement both Penn
+                                            and the region as an epicenter for groundbreaking research and teaching,
+                                            translational discovery, and policy expertise in life sciences and public
+                                            health. </li>
+                                        <li>Data: From big data to large language model-powered AI, technological
+                                            advances offer the chance to unlock new understanding across a dizzying
+                                            number of domains and at the same time may dramatically outpace society’s
+                                            ability to assess and plan for the promises and consequences. Penn is poised
+                                            to lead in data-driven research, teaching, and applications. We will also
+                                            cultivate leading expertise on how society can develop and deploy powerful
+                                            technologies beneficially and justly.</li>
+                                        <li>Democracy, trust, and truth: Position Penn as a global leader in driving
+                                            conversations about and promoting democratic values and institutions. Build
+                                            on signature homegrown strengths and exceptionally broad-ranging expertise
+                                            to seek and defend truth.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion__panel" data-accordion-panel>
+                            <h3 class="accordion__header"><button class="accordion__button" data-accordion-button
+                                    aria-expanded="false">
+                                    <div class="accordion__image"><img class="object-cover" src="/images/image_7.jpeg"
+                                            alt="group of students dressed in saree doing a traditioal dance"></div>
+                                    <div class="accordion__title">
+                                        <div>Grow opportunity and strengthen affinity</div>
+                                    </div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1">
+                                            <path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path>
+                                        </svg></span>
+                                </button></h3>
+                            <div class="accordion__window" data-accordion-window>
+                                <div class="accordion__content" data-accordion-content>
+                                    <ul class="alpha-list">
+                                        <li>Recruit and support diverse and exceptional students, faculty, and staff
+                                            with the widest range of backgrounds, experiences, and perspectives.</li>
+                                        <li>Undertake our campus planning to ensure design and function that serves its
+                                            community for generations to come. Our physical plant should be
+                                            state-of-the-art, sustainable, and thoughtfully improved to foster the
+                                            interactions, experiences, and relationships that knit communities together.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion__panel" data-accordion-panel>
+                            <h3 class="accordion__header"><button class="accordion__button" data-accordion-button
+                                    aria-expanded="false">
+                                    <div class="accordion__image"><img class="object-cover" src="/images/image_8.jpeg"
+                                            alt="professor lecturing young students sitting on the floor of a library">
+                                    </div>
+                                    <div class="accordion__title">
+                                        <div>Deepen connection with neighbors and the world</div>
+                                    </div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1">
+                                            <path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path>
+                                        </svg></span>
+                                </button></h3>
+                            <div class="accordion__window" data-accordion-window>
+                                <div class="accordion__content" data-accordion-content>
+                                    <ul class="alpha-list">
+                                        <li>Excellent neighbor to West Philadelphia, our city, and region. Penn will
+                                            pursue all that a collaborative urban institution and caring neighbor can do
+                                            in this new era for cities everywhere. As one University, we will more
+                                            centrally convene and coordinate all the work we do in meaningful
+                                            partnership with our West Philadelphia neighbors, the city, and the region.
+                                            We will leverage our academic expertise to shed light on, and seek solutions
+                                            to, pressing urban challenges.</li>
+                                        <li>Model global citizen. At a time when the tectonic plates of the
+                                            international community are shifting rapidly, what is a leading American
+                                            university’s role in the world? By building on existing partnerships around
+                                            the world and further investing in global research, teaching, and learning
+                                            on campus, Penn will help define what the next decade requires of a leading
+                                            global university.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion__panel" data-accordion-panel>
+                            <h3 class="accordion__header"><button class="accordion__button" data-accordion-button
+                                    aria-expanded="false">
+                                    <div class="accordion__image"><img class="object-cover" src="/images/image_9.jpeg"
+                                            alt="staff at penn vet working dog center training dogs"></div>
+                                    <div class="accordion__title">
+                                        <div>Foster leadership and service</div>
+                                    </div><span class="accordion__arrow-btn pill"><svg viewBox="0 0 18.1 10.1">
+                                            <path d="m9 10.1-9-9L1.1 0 9 8l8-8 1.1 1.1z"></path>
+                                        </svg></span>
+                                </button></h3>
+                            <div class="accordion__window" data-accordion-window>
+                                <div class="accordion__content" data-accordion-content>
+                                    <ul class="alpha-list">
+                                        <li>Cultivate leaders who serve. The world needs leaders now more than
+                                            ever—discerning leaders who have knowledge, vision, creativity, and, above
+                                            all, a commitment to making a difference for others and for the planet. Penn
+                                            has long prepared students to be leaders. For the future, we will build on
+                                            existing resources and initiate new ways of cultivating service-minded
+                                            leadership among our students, and also our faculty and staff.</li>
+                                        <li>Best-in-class instruction. Producing knowledge and transmitting that
+                                            knowledge to the next generation is the very core of the Penn experience. We
+                                            will continually seek to advance state-of-the-art and innovative instruction
+                                            to best deliver on our mission of preparing future generations to think
+                                            critically and lead effectively. </li>
+                                        <li>Convene, communicate, and collaborate across divisions and divides.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article><!--]-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__inner grid">
+                    <div class="footer__main"><a href="https://www.upenn.edu/" target="_blank"><img class="footer__logo"
+                                src="/images/logo2.svg" alt="footer logo and link to homepage"></a>
+                        <p>@inPrinciple&amp;Practice</p>
+                    </div>
+                </div>
+            </div><!--]-->
+        </main>
+    </div>
+    <script type="application/json" id="__NUXT_DATA__" data-ssr="true"
+        data-src="/_payload.json">[{"state":1,"_errors":3,"serverRendered":5,"path":6,"prerenderedAt":7},["Reactive",2],{},["Reactive",4],{},true,"/",1697040511967]</script>
+    <script>window.__NUXT__ = {}; window.__NUXT__.config = { public: {}, app: { baseURL: "/", buildAssetsDir: "/_nuxt/", cdnURL: "" } }</script>
+</body>
+
 </html>
