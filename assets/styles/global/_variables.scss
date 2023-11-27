@@ -1,0 +1,26 @@
+@import '../mixins/mixins-foundation';
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&family=Roboto:wght@300;400&display=swap');
+
+// Colors
+$black: #2d2d2d;
+$white: #f3f3f1;
+$navy: #011f5b;
+$red: #8f0000;
+
+// Fonts
+$font-primary: 'EB Garamond', serif;
+$font-secondary: 'Open Sans', sans-serif;
+$font-tertiary: 'Roboto', sans-serif;
+
+// Grid
+$grid-max-width: rem-calc(1960px);
+$grid-column-gutter: (
+  small: 30px,
+  large: 50px,
+);
+
+// Easing
+$ease-default: ease-in-out;
+
+// Transitions
+$transition-default: 0.2s $ease-default;

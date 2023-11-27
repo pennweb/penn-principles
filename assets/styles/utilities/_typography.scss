@@ -1,0 +1,59 @@
+// Typography
+/* ------------------------------------- */
+
+// Headings
+.heading-style-1 { @include heading-style-1() }
+
+.heading-style-2 { @include heading-style-2() }
+
+.heading-style-3 { @include heading-style-3() }
+
+// Subheadings
+.subheading-style-1 { @include subheading-style-1() }
+
+// Paragraphs
+.paragraph-style-1 { @include paragraph-style-1() }
+
+.paragraph-style-2 { @include paragraph-style-2() }
+
+// List
+.alpha-list {
+  @extend .paragraph-style-2;
+
+  li {
+    list-style-type: disc;
+    padding-left: 10px;
+    margin-left: 15px;
+
+    &::marker {
+      font-family: $font-primary;
+      font-size: rem-calc(14px);
+      text-transform: uppercase;
+      color: $red;
+    }
+  }
+
+  li + li {
+    margin-top: 20px;
+  }
+}
+
+// Colors
+.text-light { color: $white; }
+
+.text-dark { color: $navy; }
+
+.text-primary { color: $red; }
+
+// Alignment
+.text-center { text-align: center; }
+
+// Spacing Relationships
+/* ------------------------------------- */
+.heading-style-1 + .paragraph-style-1 { margin-top: 40px; }
+
+.heading-style-2 + .paragraph-style-1 { margin-top: 20px; }
+
+.heading-style-2 + .paragraph-style-2 { margin-top: 30px; }
+
+.subheading-style-1 + .heading-style-2 { margin-top: 20px; }
