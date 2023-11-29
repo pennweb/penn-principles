@@ -43,10 +43,6 @@ export default {
     VMPlayer.on('ended', () => {
       component.active = false;
     });
-
-    VMPlayer.on('pause', () => {
-      component.active = false;
-    });
   },
   props: {
     id: {

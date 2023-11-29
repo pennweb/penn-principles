@@ -2,14 +2,8 @@
   <div class="footer">
     <div class="footer__inner grid">
       <div class="footer__main">
-        <a href="https://www.upenn.edu/" target="_blank">
-          <img
-            class="footer__logo"
-            src="/images/logo2.svg"
-            alt="footer logo and link to homepage"
-          />
-        </a>
-        <p>@inPrinciple&Practice</p>
+        <Logo />
+        <p>&#169; 2023, University of Pennsylvania</p>
       </div>
     </div>
   </div>
@@ -34,6 +28,26 @@
 
     @include breakpoint(medium) {
       width: 540px;
+    }
+  }
+
+  .logo {
+
+    &__left {
+      @include breakpoint(medium) {
+        width: 260px;
+      }
+    }
+
+    &__right {
+      @include breakpoint(medium) {
+        width: 220px;
+      }
+    }
+
+    .st1,
+    .st0 {
+      fill:#011f5b;
     }
   }
 

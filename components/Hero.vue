@@ -7,13 +7,7 @@
       <div class="hero__overlay">
         <div class="hero__inner grid">
           <div class="hero__top">
-            <a href="https://www.upenn.edu/" target="_blank">
-              <img
-                class="hero__logo"
-                src="/images/logo.svg"
-                alt="header logo and link to homepage"
-              />
-            </a>
+            <Logo />
             <img
               class="hero__badge"
               src="/images/badge.svg"
@@ -38,7 +32,7 @@
               />
             </div>
             <div class="btn-group">
-              <button
+              <!-- <button
                 class="btn"
                 @click="video.setActive()"
               >
@@ -46,8 +40,8 @@
                   <path d="M0 0v13.6l19.7-6.8z" />
                 </svg>
                 Watch
-              </button>
-              <a class="btn btn--read" href="/" target="_blank">
+              </button> -->
+              <a class="btn btn--read" href="/iPaP.pdf" target="_blank">
                 <svg viewBox="0 0 17.1 13">
                   <path d="M17.1 0 8.6 2.3 0 0v13l8.6-2.3 8.5 2.3z" />
                 </svg>
@@ -57,9 +51,10 @@
           </div>
         </div>
       </div>
-      <video autoplay muted loop>
+      <img class="hero__temp-background" src="/images/image_1.jpeg" alt="campus pathway" />
+      <!-- <video autoplay muted loop>
         <source src="/videos/videoplayback.mp4" type="video/mp4">
-      </video>
+      </video> -->
     </div>
   </Video>
 </template>
@@ -100,6 +95,7 @@
   &__top {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     grid-column: span 12 / span 12;
     margin-top: 40px;
 
@@ -210,6 +206,12 @@
     appearance: none;
     border: 0;
     cursor: pointer;
+  }
+
+  &__temp-background {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
   }
 }
 </style>
