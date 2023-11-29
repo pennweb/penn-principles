@@ -1,1 +1,0 @@
-import{_ as t,j as a,k as s,F as _}from"./entry.9f65eaf7.js";const o={},n={class:"layout layout--default"};function l(e,c){return a(),s("main",n,[_(e.$slots,"default")])}const u=t(o,[["render",l]]);export{u as default};
