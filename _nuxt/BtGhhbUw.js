@@ -1,0 +1,1 @@
+import{_ as t,t as a,v as o,J as s}from"./DUtb2o1j.js";const c={},n={class:"layout layout--default"};function r(e,l){return a(),o("main",n,[s(e.$slots,"default")])}const f=t(c,[["render",r]]);export{f as default};
